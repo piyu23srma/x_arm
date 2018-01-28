@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<launch>
+	 <arg name = "moveit_controller_manager" default = "moveit_simple_controller_manager/MoveItSimpleControllerManager" />
+  <param name = "moveit_controller_manager" value = "$(arg moveit_controller_manager)" />
+ 
+  <!-- Load controller_list  --> 
+  <arg name = "use_controller_manager" default = "true" />
+  <param name = "use_controller_manager" value = "$(arg use_controller_manager)" />
+
+
+
+	<rosparam file="$(find x_arm_moveit)/config/controllers.yaml"/>
+</launch>

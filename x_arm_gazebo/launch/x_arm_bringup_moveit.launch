@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+	<include file="$(find x_arm_gazebo)/launch/x_arm_world.launch" />   
+
+  <rosparam file="$(find x_arm_gazebo)/config/x_arm_trajectory_control.yaml" command="load"/>
+
+
+  <node name="ros_control_controller_manager" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" ns="/x_arm" args="joint_state_controller position_trajectory_controller gripper_controller" />
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+  respawn="false" output="screen">
+  	<remap from="/joint_states" to="/x_arm/joint_states" />
+  </node>	
+</launch>

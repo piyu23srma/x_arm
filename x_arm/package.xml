@@ -51,6 +51,8 @@
   <buildtool_depend>catkin</buildtool_depend>
   <exec_depend>x_arm_description</exec_depend>
   <exec_depend>x_arm_gazebo</exec_depend>
+  <exec_depend>x_arm_moveit</exec_depend>
+
   <!-- The export tag contains other, unspecified, tags -->
   <export>
     <!-- Other tools can request additional information be placed here -->

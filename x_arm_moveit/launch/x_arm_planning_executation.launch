@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<launch>
+  <include file="$(find x_arm_moveit)/launch/move_group.launch">
+    <arg name="publish_monitored_planning_scene" value="true" />
+  </include>
+
+  <include file="$(find x_arm_moveit)/launch/moveit_rviz.launch">
+   <arg name="config" value="true"/>
+   </include>
+
+</launch>
